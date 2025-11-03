@@ -1,0 +1,30 @@
+# Paths
+data_tools_dir: "C:/Users/asafi/Downloads/Data_Tools"
+fed_data_dir:   "C:/Users/asafi/Downloads/FinancialData/FedData"
+output_dir:     "C:/Users/asafi/Downloads/ETL"
+
+# Toggles
+verbose_missing: false
+plot_quicklook:  false
+
+# Cutoffs / policy
+dfedtar_cutoff: "2008-12-15"
+
+# Output
+write_latest_copy: true
+latest_filename: "FED_Merged_latest.csv"
+
+# --- Paths ---
+output_dir: "C:/Users/asafi/Downloads/ETL"
+
+# --- CSV output control ---
+write_latest_copy: true
+latest_filename: "FED_Merged_latest.csv"
+
+# --- SQL sink (optional) ---
+sql:
+  enabled: true
+  writer: "sql_sink_example:write_dataframe_and_log"
+  conn_str: "sqlite:///C:/Users/asafi/Downloads/ETL/fedtools2.db"
+  base_table: "fed_targets_daily"
+  log_table: "fed_targets_runs"

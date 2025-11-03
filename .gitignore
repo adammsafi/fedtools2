@@ -1,43 +1,104 @@
-# --- Python cache and build artifacts ---
+# ------------------------------------------------------------------------------
+# Python cache & build artifacts
+# ------------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.so
+*$py.class
 
 # Distribution / packaging
 *.egg-info/
-.eggs/
+*.egg
 build/
 dist/
 pip-wheel-metadata/
+.eggs/
 
+# ------------------------------------------------------------------------------
 # Virtual environments
-.venv/
-venv/
+# ------------------------------------------------------------------------------
+.env
+.venv
 env/
+venv/
 ENV/
+env.bak/
+venv.bak/
 
-# Test / coverage / logs
-.coverage
-htmlcov/
-pytest_cache/
-nosetests.xml
-*.log
-
-# Jupyter / IPython
-.ipynb_checkpoints/
-
-# Editors / IDEs
+# ------------------------------------------------------------------------------
+# IDE & Editor settings
+# ------------------------------------------------------------------------------
+# VSCode
 .vscode/
+# PyCharm / IntelliJ
 .idea/
-*.sublime-project
-*.sublime-workspace
+# Spyder / Jupyter / VS temp files
+.spyproject/
+.ipynb_checkpoints/
+*.swp
+*.swo
 
-# OS files
-.DS_Store
+# ------------------------------------------------------------------------------
+# Logs, Reports & Temporary files
+# ------------------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.old
+*.orig
+*.DS_Store
 Thumbs.db
+
+# ------------------------------------------------------------------------------
+# Coverage & testing
+# ------------------------------------------------------------------------------
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.tox/
+.nox/
+.pytest_cache/
+
+# ------------------------------------------------------------------------------
+# Documentation builds
+# ------------------------------------------------------------------------------
+docs/_build/
+doc/_build/
+build/sphinx/
+*.rst~
+*.out
+*.pdf
+
+# ------------------------------------------------------------------------------
+# Local output files (project-specific)
+# ------------------------------------------------------------------------------
+# ETL outputs and structure summaries
+structure.txt
+structure.md
+structure.json
+structure.csv
+FED_Merged_*.csv
+
+# ------------------------------------------------------------------------------
+# System files
+# ------------------------------------------------------------------------------
+.DS_Store
+ehthumbs.db
+Icon?
 desktop.ini
 
-# Project-specific
-structure.txt
+# ------------------------------------------------------------------------------
+# Miscellaneous
+# ------------------------------------------------------------------------------
+# Optional Jupyter notebook exports
+*.ipynb_checkpoints/
+# VS temporary history
+.history/
+# MacOS metadata
+._*
