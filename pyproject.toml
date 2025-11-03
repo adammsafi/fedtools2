@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedtools2"
+version = "0.1.0"
+description = "ETL + utilities for Federal Reserve rate datasets"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Adam Safi" }]
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "pyyaml>=6.0",
+  "matplotlib>=3.8"
+]
+
+[project.scripts]
+fedtools2 = "fedtools2.etl:main"
+
+[tool.setuptools.packages.find]
+# Auto-discover packages under the 'fedtools2' directory
+include = ["fedtools2*"]
+
+[tool.setuptools.package-data]
+# Include YAML config files inside the installed package
+"fedtools2" = ["config/*.yaml"]
