@@ -1,0 +1,54 @@
+# -----------------------------
+# Default: normalize text files
+# -----------------------------
+* text=auto
+
+# -----------------------------
+# Force LF for cross-platform text & code
+# (stored LF in repo; checkout uses LF)
+# -----------------------------
+*.py     text eol=lf
+*.toml   text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.sql    text eol=lf
+*.sh     text eol=lf
+Makefile text eol=lf
+Dockerfile text eol=lf
+*.cfg    text eol=lf
+*.ini    text eol=lf
+*.csv    text eol=lf
+*.tsv    text eol=lf
+*.ipynb  text eol=lf
+
+# -----------------------------
+# Keep CRLF for Windows scripts
+# -----------------------------
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# -----------------------------
+# Binary files (no EOL changes / diffs)
+# -----------------------------
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.gz    binary
+*.7z    binary
+*.tar   binary
+*.db    binary
+*.sqlite* binary
+*.pkl   binary
+
+# -----------------------------
+# Minified assets: don’t touch EOLs
+# -----------------------------
+*.min.js  -text
+*.min.css -text
